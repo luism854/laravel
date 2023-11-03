@@ -19,9 +19,7 @@
                 Devstagram
             </h1>
             <div class=" flex gap-5">
-                <div class="font-bold cursor-pointer">
-                    LOGIN
-                </div>
+                <a href="{{ route('login') }}" class="font-bold cursor-pointer">LOGIN</a>
                 <a href="{{route('register')}}" class="font-bold cursor-pointer">REGISTRARSE</a>
             </div>
         </header>
