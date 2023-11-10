@@ -18,6 +18,14 @@
             <h1 class="text-3xl font-black">
                 Devstagram
             </h1>
+            {{-- vamos a verificar si un usuario esta autenticado --}}
+
+            @if(auth()->user())
+                <p>Autenticado</p>
+            @else
+                <p>No Autenticado</p>
+            @endif
+
             <div class=" flex gap-5">
                 <a href="{{ route('login') }}" class="font-bold cursor-pointer">LOGIN</a>
                 <a href="{{route('register')}}" class="font-bold cursor-pointer">REGISTRARSE</a>

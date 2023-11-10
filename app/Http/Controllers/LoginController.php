@@ -15,5 +15,12 @@ class LoginController extends Controller
             'identificacion'=>'required',
             'password'=>'required'
         ]);
+
+        if(!auth()->attempt($request->only('identificacion','password'))){
+            return back()->with('mensaje','Credenciales incorrectas');
+        }
+
+        return redirect()->route('post.index');
     }
+
 }
